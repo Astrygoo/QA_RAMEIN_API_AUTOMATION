@@ -1,0 +1,32 @@
+name: Ramein API Automation
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run API Automation
+        run: |
+          newman run "Postman-Files/Ramein API Automation.postman_collection.json" \
+            -e "Postman-Files/BaseUrlRamein.postman_environment.json" \
+            --reporters cli
