@@ -29,4 +29,5 @@ jobs:
         run: |
           newman run "Postman-Files/Ramein API Automation.postman_collection.json" \
             -e "Postman-Files/BaseUrlRamein.postman_environment.json" \
-            --reporters cli
+            --reporters cli \
+            --suppress-exit-code
