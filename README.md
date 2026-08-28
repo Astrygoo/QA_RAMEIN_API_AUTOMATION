@@ -429,7 +429,7 @@ The Postman test execution result for the same failing scenario was connected to
 
 > Add Jira evidence screenshot here:
 >
-> `docs/images/jira-kan-1.png`
+> ![Jira Bug Report - KAN-1](docs/images/jira-kan-1.png)
 
 ### QA Observation
 
